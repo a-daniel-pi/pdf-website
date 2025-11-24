@@ -27,7 +27,7 @@ router.get('/:name', (req, res, callback) => {
         });
     }
     catch (error) {
-        console.log(error);
+        // Pass it on to the 404 handler
         callback();
     }
 });
