@@ -1,0 +1,20 @@
+body {
+    background-color: lime;
+}
+
+h1 {
+    text-align: center;
+}
+
+.link-container {
+    text-align: center;
+}
+
+.pdflink {
+    border-radius: 4px;
+    border: 2px solid black;
+    margin: 4px;
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+}

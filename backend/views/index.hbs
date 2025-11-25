@@ -2,15 +2,22 @@
 <html>
 <head>
     <title>PDFs</title>
+    <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
     <h1>Biological Notes</h1>
-    {{#each pdfs}}
-        <div>
-            <a href="/pdfs/{{file}}">{{name}}</a>
-            <p>{{description}}</p>
-            <br/>
-        </div>
-    {{/each}}
+    <p>Hello, these are some of my notes from bio last semester. 
+        As you can see, they are <i>incredibly</i> good notes
+        and definitely had a ton of effort put into them.</i>
+    </p>
+    <div class="link-container">
+        {{#each pdfs}}
+            <div class="pdflink">
+                <a href="/pdfs/{{file}}">{{name}}</a>
+                <p>{{description}}</p>
+                <br/>
+            </div>
+        {{/each}}
+    </div>
 </body>
 </html>

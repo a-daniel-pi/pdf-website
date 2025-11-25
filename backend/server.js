@@ -13,9 +13,11 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
+app.use(express.static('public')) // Static files (pretty much just css)
+
 hbs.registerPartials(path.join(__dirname, 'views', 'partials'));
 
-app.use('/pdfs', pdfRoute)
+app.use('/pdfs', pdfRoute); // Attach route to pdfs
 
 app.get('/', (req, res) => {
     res.render('index', {pdfs: listPdfs});
