@@ -18,10 +18,8 @@ hbs.registerPartials(path.join(__dirname, 'views', 'partials'));
 app.use('/pdfs', pdfRoute)
 
 app.get('/', (req, res) => {
-    res.render('index', {});
+    res.render('index', {pdfs: listPdfs});
 });
-
-console.log(listPdfs());
 
 app.listen(PORT, () => {
     console.log(`Listening on Port ${PORT}`);
