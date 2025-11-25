@@ -23,6 +23,11 @@ app.get('/', (req, res) => {
     res.render('index', {pdfs: listPdfs});
 });
 
+// 404 handler
+app.use((req, res) => {
+    res.status(404).render('404', {"url": req.path});
+});
+
 app.listen(PORT, () => {
     console.log(`Listening on Port ${PORT}`);
 });
